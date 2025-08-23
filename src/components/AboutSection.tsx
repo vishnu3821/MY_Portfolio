@@ -46,7 +46,7 @@ const AboutSection: React.FC = () => {
             >
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10">
                 <img 
-                  src="/passport photo edited.jpg" 
+                  src="/images/passport%20photo%20edited.jpg" 
                   alt="Vishnu Prabhakar"
                   className="w-60 h-60 rounded-full object-cover border-4 border-white/20"
                 />

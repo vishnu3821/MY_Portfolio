@@ -14,7 +14,7 @@ const EducationSection: React.FC = () => {
       period: "2023 - 2027",
       description: "Focused on software development, data structures, algorithms, and emerging technologies.",
       grade: "9.24 CGPA",
-      image: "/KL-Image.jpg",
+      image: "/images/education/KL-Image.jpg",
       imagePosition: "left"
     },
     {
@@ -24,7 +24,7 @@ const EducationSection: React.FC = () => {
       period: "2021 - 2023",
       description: "Strong foundation in mathematics, physics, and computer science fundamentals.",
       grade: "88.1%",
-      image: "/Tirumala_Logo.jpg",
+      image: "/images/education/Tirumala_Logo.jpg",
       imagePosition: "right"
     }
   ];

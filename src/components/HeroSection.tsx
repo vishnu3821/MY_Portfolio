@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
           >
             <div className="bg-slate-900 rounded-full p-6">
               <img 
-                src="/passport photo edited.jpg" 
+                src="/images/passport%20photo%20edited.jpg" 
                 alt="Vishnu Prabhakar"
                 className="w-24 h-24 rounded-full object-cover border-2 border-white/20"
               />
