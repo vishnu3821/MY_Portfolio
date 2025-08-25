@@ -14,7 +14,7 @@ const CertificationsSection: React.FC = () => {
       description: "Certification in language proficiency and communication skills.",
       skills: ["Language Proficiency", "Communication", "Verbal Skills"],
       gradient: "from-indigo-400 to-purple-400",
-      pdf: "/Lingua_skill_certificate.jpg"
+      pdf: "/certificates/Lingua_skill_certificate.jpg"
     },
     {
       title: "JPMorgan Investment Banking",
@@ -23,7 +23,7 @@ const CertificationsSection: React.FC = () => {
       description: "Certification in investment banking fundamentals, financial analysis, and market strategies.",
       skills: ["Investment Banking", "Financial Analysis", "Market Strategies"],
       gradient: "from-blue-400 to-cyan-400",
-      pdf: "/JPMORGAN INVESTEMENT CERTIFIVATE.pdf"
+      pdf: "/certificates/JPMORGAN INVESTEMENT CERTIFIVATE.pdf"
     },
     {
       title: "Data Analytics Certificate",
@@ -32,7 +32,7 @@ const CertificationsSection: React.FC = () => {
       description: "Comprehensive training in data analysis, visualization, and interpretation techniques.",
       skills: ["Data Analysis", "Visualization", "Statistics", "Python"],
       gradient: "from-green-400 to-teal-400",
-      pdf: "/dataAnalyticscertificate.pdf"
+      pdf: "/certificates/dataAnalyticscertificate.pdf"
     },
     {
       title: "Software Engineer Internship",
@@ -41,7 +41,7 @@ const CertificationsSection: React.FC = () => {
       description: "Hands-on experience in software development, coding, and team collaboration.",
       skills: ["Software Development", "Coding", "Teamwork", "Problem Solving"],
       gradient: "from-purple-400 to-pink-400",
-      pdf: "/software_engineer_intern certificate.pdf"
+      pdf: "/certificates/software_engineer_intern certificate.pdf"
     },
     {
       title: "Resume Writing & Job Interviewing",
@@ -50,7 +50,7 @@ const CertificationsSection: React.FC = () => {
       description: "Professional certification in resume building and interview preparation techniques.",
       skills: ["Resume Writing", "Interview Skills", "Career Development"],
       gradient: "from-yellow-400 to-orange-400",
-      pdf: "/(HP CERTIFICATE)Resume Writing and Job Interviewing.pdf"
+      pdf: "/certificates/(HP CERTIFICATE)Resume Writing and Job Interviewing.pdf"
     }
   ];
 
@@ -109,7 +109,15 @@ const CertificationsSection: React.FC = () => {
                 </motion.div>
 
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">
-                  {cert.title}
+                  <a 
+                    href={cert.pdf} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {cert.title}
+                  </a>
                 </h3>
 
                 <div className="flex items-center gap-2 text-purple-300 mb-3">
