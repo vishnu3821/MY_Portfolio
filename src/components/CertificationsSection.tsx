@@ -8,6 +8,15 @@ const CertificationsSection: React.FC = () => {
 
   const certifications = [
     {
+      title: "AI-ML Virtual Internship",
+      issuer: "EduSkills | AICTE | Google for Developers",
+      date: "Jul - Sep 2025",
+      description: "10-week intensive program on Artificial Intelligence & Machine Learning with hands-on projects and real-world problem statements. Mentored under the Google for Developers ecosystem.",
+      skills: ["Python", "Machine Learning", "Data Preprocessing", "Model Deployment"],
+      gradient: "from-red-500 to-purple-600",
+      pdf: "/certificates/eduskills_ai_ml_internship.pdf"
+    },
+    {
       title: "Lingua Skills Certification",
       issuer: "Lingua Skills",
       date: "2023",
@@ -26,15 +35,6 @@ const CertificationsSection: React.FC = () => {
       pdf: "/certificates/JPMORGAN INVESTEMENT CERTIFIVATE.pdf"
     },
     {
-      title: "Data Analytics Certificate",
-      issuer: "Professional Certification",
-      date: "2024",
-      description: "Comprehensive training in data analysis, visualization, and interpretation techniques.",
-      skills: ["Data Analysis", "Visualization", "Statistics", "Python"],
-      gradient: "from-green-400 to-teal-400",
-      pdf: "/certificates/dataAnalyticscertificate.pdf"
-    },
-    {
       title: "Software Engineer Internship",
       issuer: "Professional Certification",
       date: "2023",
@@ -44,6 +44,15 @@ const CertificationsSection: React.FC = () => {
       pdf: "/certificates/software_engineer_intern certificate.pdf"
     },
     {
+      title: "Data Analytics Certificate",
+      issuer: "Professional Certification",
+      date: "2024",
+      description: "Comprehensive training in data analysis, visualization, and interpretation techniques.",
+      skills: ["Data Analysis", "Visualization", "Statistics", "Python"],
+      gradient: "from-green-400 to-teal-400",
+      pdf: "/certificates/dataAnalyticscertificate.pdf"
+    },
+    {
       title: "Resume Writing & Job Interviewing",
       issuer: "HP Certification",
       date: "2023",
@@ -51,15 +60,6 @@ const CertificationsSection: React.FC = () => {
       skills: ["Resume Writing", "Interview Skills", "Career Development"],
       gradient: "from-yellow-400 to-orange-400",
       pdf: "/certificates/(HP CERTIFICATE)Resume Writing and Job Interviewing.pdf"
-    },
-    {
-      title: "AI-ML Virtual Internship",
-      issuer: "EduSkills | AICTE | Google for Developers",
-      date: "Jul - Sep 2025",
-      description: "10-week intensive program on Artificial Intelligence & Machine Learning with hands-on projects and real-world problem statements. Mentored under the Google for Developers ecosystem.",
-      skills: ["Python", "Machine Learning", "Data Preprocessing", "Model Deployment"],
-      gradient: "from-red-500 to-purple-600",
-      pdf: "/certificates/eduskills_ai_ml_internship.pdf"
     }
   ];
 
