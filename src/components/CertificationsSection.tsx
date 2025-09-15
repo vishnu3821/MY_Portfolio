@@ -51,6 +51,15 @@ const CertificationsSection: React.FC = () => {
       skills: ["Resume Writing", "Interview Skills", "Career Development"],
       gradient: "from-yellow-400 to-orange-400",
       pdf: "/certificates/(HP CERTIFICATE)Resume Writing and Job Interviewing.pdf"
+    },
+    {
+      title: "AI-ML Virtual Internship",
+      issuer: "EduSkills | AICTE | Google for Developers",
+      date: "Jul - Sep 2025",
+      description: "10-week intensive program on Artificial Intelligence & Machine Learning with hands-on projects and real-world problem statements. Mentored under the Google for Developers ecosystem.",
+      skills: ["Python", "Machine Learning", "Data Preprocessing", "Model Deployment"],
+      gradient: "from-red-500 to-purple-600",
+      pdf: "/certificates/eduskills_ai_ml_internship.pdf"
     }
   ];
 
