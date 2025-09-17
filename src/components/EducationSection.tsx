@@ -24,7 +24,7 @@ const EducationSection: React.FC = () => {
       period: "2021 - 2023",
       description: "Strong foundation in mathematics, physics, and Chemistry.",
       grade: "88.1%",
-      image: "/Tirumala_Logo.jpg",
+      image: "/images/education/Tirumala_Logo.jpg",
       imagePosition: "right"
     }
   ];
