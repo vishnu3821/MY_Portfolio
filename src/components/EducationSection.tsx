@@ -77,11 +77,11 @@ const EducationSection: React.FC = () => {
                 <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'} ml-10 md:ml-0`}>
                   {edu.image && (
                     <div className={`mb-4 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                      <div className="inline-block bg-white p-3 rounded-lg shadow-lg">
+                      <div className="inline-block bg-white p-2 rounded-lg shadow-lg">
                         <img 
                           src={edu.image} 
                           alt={`${edu.institution} Logo`}
-                          className="h-16 w-auto max-w-[180px] object-contain"
+                          className="h-20 w-auto max-w-[220px] object-contain"
                           style={{ 
                             imageRendering: 'auto',
                             mixBlendMode: 'multiply' 
