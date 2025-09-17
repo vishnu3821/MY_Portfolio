@@ -76,12 +76,16 @@ const EducationSection: React.FC = () => {
                 {/* Content */}
                 <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'} ml-10 md:ml-0`}>
                   {edu.image && (
-                    <div className={`mb-2 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                      <div className="inline-block">
+                    <div className={`mb-4 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                      <div className="inline-block bg-white p-3 rounded-lg shadow-lg">
                         <img 
                           src={edu.image} 
                           alt={`${edu.institution} Logo`}
-                          className="w-full max-w-[200px] h-auto rounded-lg shadow-lg"
+                          className="h-16 w-auto max-w-[180px] object-contain"
+                          style={{ 
+                            imageRendering: 'auto',
+                            mixBlendMode: 'multiply' 
+                          }}
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';
