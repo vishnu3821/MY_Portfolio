@@ -12,7 +12,7 @@ const EducationSection: React.FC = () => {
       field: "Computer Science & Engineering",
       institution: "KL University",
       period: "2023 - 2027",
-      description: "Focused on software development, data structures, algorithms, and emerging technologies.",
+      description: "Focused on mastering programming languages, data structures, algorithms, and full-stack development with hands-on projects.",
       grade: "9.24 CGPA",
       image: "/images/education/KL-Image.jpg",
       imagePosition: "left"
@@ -22,21 +22,21 @@ const EducationSection: React.FC = () => {
       field: "",
       institution: "Tirumala Junior College",
       period: "2021 - 2023",
-      description: "Strong foundation in mathematics, physics, and computer science fundamentals.",
+      description: "Strong foundation in mathematics, physics, and Chemistry.",
       grade: "88.1%",
-      image: "/images/education/Tirumala_Logo.jpg",
+      image: "/Tirumala_Logo.jpg",
       imagePosition: "right"
     }
   ];
 
   return (
-    <section id="education" ref={ref} className="py-20 px-4">
+    <section id="education" ref={ref} className="py-12 px-4">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
             Education
@@ -74,14 +74,20 @@ const EducationSection: React.FC = () => {
                 </motion.div>
 
                 {/* Content */}
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-12 md:ml-0`}>
-                  {index % 2 === 0 && edu.image && edu.imagePosition === 'left' && (
-                    <div className="mb-4">
-                      <img 
-                        src={edu.image} 
-                        alt={`${edu.institution} Logo`}
-                        className="w-full max-w-xs h-auto rounded-lg shadow-lg"
-                      />
+                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'} ml-10 md:ml-0`}>
+                  {edu.image && (
+                    <div className={`mb-2 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                      <div className="inline-block">
+                        <img 
+                          src={edu.image} 
+                          alt={`${edu.institution} Logo`}
+                          className="w-full max-w-[200px] h-auto rounded-lg shadow-lg"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                          }}
+                        />
+                      </div>
                     </div>
                   )}
                   

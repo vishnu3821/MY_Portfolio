@@ -131,7 +131,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full bg-slate-800/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                placeholder="John Doe"
+                placeholder=""
                 disabled={isSubmitting}
                 required
               />

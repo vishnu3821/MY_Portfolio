@@ -5,8 +5,8 @@ const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-purple-800/30 to-pink-900/20 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 via-purple-900/10 to-slate-900/10" />
       </div>
       
       {/* Floating Particles */}

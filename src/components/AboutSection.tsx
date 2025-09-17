@@ -1,18 +1,74 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Download, Code, Zap, Users } from 'lucide-react';
 
-const AboutSection: React.FC = () => {
+// Configuration for dots
+const DOTS_CONFIG = {
+  desktop: { count: 8, minSize: 2, maxSize: 6 },
+  mobile: { count: 4, minSize: 2, maxSize: 5 },
+  colors: ['#60a5fa', '#818cf8', '#a78bfa'],
+  animation: {
+    duration: { min: 3, max: 6 },
+    delay: 0.2,
+    distance: 40
+  }
+};
+
+const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Responsive dots configuration
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Memoized dots data
+  const dots = useMemo(() => {
+    const config = isMobile ? DOTS_CONFIG.mobile : DOTS_CONFIG.desktop;
+    return Array.from({ length: config.count }).map((_, i) => ({
+      id: i,
+      size: Math.random() * (config.maxSize - config.minSize) + config.minSize,
+      color: DOTS_CONFIG.colors[Math.floor(Math.random() * DOTS_CONFIG.colors.length)],
+      position: {
+        x: Math.random() * 80 + 10, // 10-90% of container
+        y: Math.random() * 80 + 10
+      },
+      animation: {
+        duration: Math.random() * (DOTS_CONFIG.animation.duration.max - DOTS_CONFIG.animation.duration.min) + DOTS_CONFIG.animation.duration.min,
+        delay: i * DOTS_CONFIG.animation.delay,
+        distance: (Math.random() * DOTS_CONFIG.animation.distance) + 10
+      }
+    }));
+  }, [isMobile]);
 
   const features = [
     { icon: Code, title: 'Full Stack Development', desc: 'End-to-end web solutions' },
     { icon: Zap, title: 'AI & Innovation', desc: 'Cutting-edge technology' },
     { icon: Users, title: 'Team Collaboration', desc: 'Effective teamwork' },
   ];
+
+  // Animation variants for staggered children
+  // Simple dot animation with basic fade in/out
+  const dotVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: [0.3, 0.7, 0.3],
+      y: [0, -30, 0],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut" as const
+      }
+    }
+  };
 
   return (
     <section id="about" ref={ref} className="py-20 px-4">
@@ -53,27 +109,37 @@ const AboutSection: React.FC = () => {
               </div>
             </motion.div>
             
-            {/* Floating elements */}
-            {[...Array(3)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
-                style={{
-                  left: `${20 + i * 30}%`,
-                  top: `${30 + i * 20}%`,
-                }}
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.5, 1, 0.5],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 2 + i,
-                  repeat: Infinity,
-                  delay: i * 0.5,
-                }}
-              />
-            ))}
+            {/* Animated Dots Background */}
+            <div className="absolute inset-0">
+              {dots.map((dot) => (
+                <motion.div
+                  key={dot.id}
+                  className="absolute rounded-full"
+                  style={{
+                    width: `${dot.size}px`,
+                    height: `${dot.size}px`,
+                    left: `${dot.position.x}%`,
+                    top: `${dot.position.y}%`,
+                    backgroundColor: dot.color,
+                    filter: 'drop-shadow(0 0 4px currentColor)',
+                    willChange: 'transform, opacity'
+                  }}
+                  variants={dotVariants}
+                  initial="hidden"
+                  animate={isInView ? "visible" : "hidden"}
+                  transition={{ 
+                    duration: 3 + Math.random(),
+                    repeat: Infinity,
+                    delay: Math.random() * 2
+                  }}
+                  aria-hidden="true"
+                  whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.2 }
+                  }}
+                />
+              ))}
+            </div>
           </motion.div>
 
           <motion.div

@@ -11,6 +11,7 @@ import ExperienceSection from './components/ExperienceSection';
 import CertificationsSection from './components/CertificationsSection';
 import FooterSection from './components/FooterSection';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,15 +37,28 @@ function App() {
     duration: 0.5,
   };
 
+  // Set initial theme class on body
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
   return (
-    <div className="relative min-h-screen font-['Poppins'] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300 overflow-x-hidden cursor-none">
+      <CustomCursor />
       <AnimatedBackground />
+      <Navbar />
       <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingSpinner />
         ) : (
           <>
-            <Navbar />
             <motion.main 
               className="relative z-10"
               initial="initial"
