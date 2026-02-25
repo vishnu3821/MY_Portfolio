@@ -1,12 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ExternalLink from 'lucide-react/dist/esm/icons/external-link';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import Shield from 'lucide-react/dist/esm/icons/shield';
+import FileText from 'lucide-react/dist/esm/icons/file-text';
+import PRDModal from './PRDModal';
 
 const ProjectsSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [activePRD, setActivePRD] = useState<string | null>(null);
 
   const projects = [
     {
@@ -17,7 +20,8 @@ const ProjectsSection: React.FC = () => {
       icon: Shield,
       gradient: "from-red-400 to-orange-400",
       features: ["Real-time Alerts", "Resource Tracking", "Emergency Contacts", "Interactive Maps"],
-      link: "https://steady-malabi-8ac3bb.netlify.app/"
+      link: "https://steady-malabi-8ac3bb.netlify.app/",
+      hasPRD: true
     },
     {
       title: "Panzer Tanker",
@@ -27,7 +31,8 @@ const ProjectsSection: React.FC = () => {
       icon: Zap,
       gradient: "from-blue-400 to-purple-400",
       features: ["3D Graphics", "Physics Engine", "Multiplayer", "AI Opponents"],
-      link: "#"
+      link: "#",
+      hasPRD: false
     },
     {
       title: "CodeWise – Smart Learning & Practice Platform",
@@ -37,7 +42,8 @@ const ProjectsSection: React.FC = () => {
       icon: Zap,
       gradient: "from-purple-500 to-pink-500",
       features: ["Structured Language Practice", "Training Exams with Admin Review", "Notes & PDF Learning Modules", "Smart Progress Tracking", "Role-Based Access"],
-      link: "#"
+      link: "#",
+      hasPRD: true
     }
   ];
 
@@ -74,7 +80,11 @@ const ProjectsSection: React.FC = () => {
             >
               <div
                 className="relative block bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 transform-gpu"
-                onClick={() => project.link && window.open(project.link, '_blank', 'noopener,noreferrer')}
+                onClick={() => {
+                  if (project.link) {
+                    window.open(project.link, '_blank', 'noopener,noreferrer');
+                  }
+                }}
                 style={{ cursor: project.link ? 'pointer' : 'default' }}
               >
                 {/* Floating animation background */}
@@ -116,7 +126,10 @@ const ProjectsSection: React.FC = () => {
                         href={project.link || '#'}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => !project.link && e.preventDefault()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (!project.link) e.preventDefault();
+                        }}
                         className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
                       >
                         <ExternalLink className="w-4 h-4 text-white/70" />
@@ -183,6 +196,22 @@ const ProjectsSection: React.FC = () => {
                         View
                       </motion.div>
                     )}
+                    {project.hasPRD && (
+                      <button
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 cursor-pointer z-50 relative"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setActivePRD(project.title);
+                        }}
+                        onPointerDown={(e) => {
+                          e.stopPropagation();
+                        }}
+                      >
+                        <FileText className="w-4 h-4" />
+                        PRD
+                      </button>
+                    )}
                   </div>
                 </div>
 
@@ -197,6 +226,12 @@ const ProjectsSection: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <PRDModal
+        isOpen={!!activePRD}
+        projectTitle={activePRD}
+        onClose={() => setActivePRD(null)}
+      />
     </section>
   );
 };
