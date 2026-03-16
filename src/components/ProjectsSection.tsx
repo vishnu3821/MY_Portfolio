@@ -9,9 +9,21 @@ import PRDModal from './PRDModal';
 const ProjectsSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activePRD, setActivePRD] = useState<string | null>(null);
+  const [isPRDModalOpen, setIsPRDModalOpen] = useState(false);
+  const [selectedProjectTitle, setSelectedProjectTitle] = useState<string | null>(null);
 
   const projects = [
+    {
+      title: "CodeWise – Smart Learning & Practice Platform",
+      description: "An intelligent, AI-powered coding practice and training platform designed to help students master programming, prepare for technical exams, and build real-world problem-solving skills.",
+      technologies: ["React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS"],
+      status: "Live Demo",
+      icon: Zap,
+      gradient: "from-purple-500 to-pink-500",
+      features: ["Structured Language Practice", "Training Exams with Admin Review", "Notes & PDF Learning Modules", "Smart Progress Tracking", "Role-Based Access"],
+      link: "https://drive.google.com/file/d/1lX5QWyQAJBMdXqAPfWzPAS-HPKGPzS9p/view?usp=share_link",
+      hasPRD: true
+    },
     {
       title: "Disaster Management System",
       description: "A comprehensive web application for disaster preparedness, response coordination, and resource management with real-time alerts and mapping functionality.",
@@ -33,17 +45,6 @@ const ProjectsSection: React.FC = () => {
       features: ["3D Graphics", "Physics Engine", "Multiplayer", "AI Opponents"],
       link: "#",
       hasPRD: false
-    },
-    {
-      title: "CodeWise – Smart Learning & Practice Platform",
-      description: "An intelligent, AI-powered coding practice and training platform designed to help students master programming, prepare for technical exams, and build real-world problem-solving skills.",
-      technologies: ["React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS"],
-      status: "In Development",
-      icon: Zap,
-      gradient: "from-purple-500 to-pink-500",
-      features: ["Structured Language Practice", "Training Exams with Admin Review", "Notes & PDF Learning Modules", "Smart Progress Tracking", "Role-Based Access"],
-      link: "#",
-      hasPRD: true
     }
   ];
 
@@ -202,7 +203,8 @@ const ProjectsSection: React.FC = () => {
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          setActivePRD(project.title);
+                          setSelectedProjectTitle(project.title);
+                          setIsPRDModalOpen(true);
                         }}
                         onPointerDown={(e) => {
                           e.stopPropagation();
@@ -228,9 +230,12 @@ const ProjectsSection: React.FC = () => {
       </div>
 
       <PRDModal
-        isOpen={!!activePRD}
-        projectTitle={activePRD}
-        onClose={() => setActivePRD(null)}
+        isOpen={isPRDModalOpen}
+        projectTitle={selectedProjectTitle}
+        onClose={() => {
+          setIsPRDModalOpen(false);
+          setSelectedProjectTitle(null);
+        }}
       />
     </section>
   );

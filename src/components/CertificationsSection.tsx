@@ -10,6 +10,15 @@ const CertificationsSection: React.FC = () => {
 
   const certifications = [
     {
+      title: "Java Full Stack Developer Virtual Internship",
+      issuer: "EduSkills",
+      date: "2024",
+      description: "Comprehensive virtual internship program focusing on Java full-stack development, including front-end and back-end technologies.",
+      skills: ["Java", "Full Stack Development", "Spring Boot", "React", "MySQL"],
+      gradient: "from-blue-500 to-indigo-600",
+      pdf: "/certificates/JAVA EDUSKILLS.jpg"
+    },
+    {
       title: "AI-ML Virtual Internship",
       issuer: "EduSkills | AICTE | Google for Developers",
       date: "Jul - Sep 2025",

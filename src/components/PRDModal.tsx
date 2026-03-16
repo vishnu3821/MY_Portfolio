@@ -546,302 +546,121 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
             </div>
         );
     } else if (projectTitle === "CodeWise – Smart Learning & Practice Platform") {
-        prdSubtitle = "CodeWise – Secure Coding Environment & Exam Platform";
+        prdSubtitle = "CodeWise — A Full-Stack Technical Interview Preparation Platform";
         prdContent = (
             <div className="prose prose-slate max-w-none space-y-12">
+                <div>
+                    <p className="leading-relaxed text-slate-700 text-lg">After months of design, development, and iteration, I'm proud to present CodeWise — a comprehensive learning management platform built to bridge the gap between academic learning and real-world industry expectations for aspiring software engineers.</p>
+                </div>
+
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Product Overview</h3>
-                    <p className="leading-relaxed text-slate-700">CodeWise is a web-based coding practice and training platform. It helps students learn programming, practice problems, and take secure training exams inside a real IDE environment.</p>
-                    <div className="mt-4">
-                        <p className="font-semibold text-slate-800">The system focuses on:</p>
-                        <ul className="list-disc pl-6 space-y-1 mt-2 text-slate-700">
-                            <li>🎯 Structured coding practice</li>
-                            <li>🧠 Real exam simulation</li>
-                            <li>🤖 AI assisted learning</li>
-                            <li>📊 Progress visibility</li>
-                            <li>🔐 Role based content control</li>
-                        </ul>
-                    </div>
-                    <p className="mt-4 text-slate-700"><strong className="text-slate-900">Primary goal:</strong> Help students improve problem solving and prepare for technical interviews and exams.</p>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">The Problem I Set Out to Solve</h3>
+                    <p className="leading-relaxed text-slate-700">Students preparing for technical placements often juggle scattered resources — random coding sites, unstructured notes, generic mock tests, and little visibility into what specific companies actually look for. CodeWise brings all of this into one structured, intelligent platform.</p>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Product Objectives</h3>
-                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                        <li>🖥️ Provide a real IDE experience in the browser</li>
-                        <li>⚡ Enable fast and reliable code execution</li>
-                        <li>🛡️ Deliver secure training exams</li>
-                        <li>📈 Track learner progress at topic level</li>
-                        <li>🧩 Support scalable content management</li>
-                    </ul>
-                    <div className="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <p className="font-semibold text-slate-800 mb-3">Success metrics:</p>
-                        <div className="flex flex-wrap gap-2 text-sm">
-                            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full border border-green-200 font-medium whitespace-nowrap">📅 Daily active users</span>
-                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full border border-blue-200 font-medium whitespace-nowrap">🧮 Avg problems solved/user</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full border border-purple-200 font-medium whitespace-nowrap">📝 Exam completion rate</span>
-                            <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full border border-yellow-200 font-medium whitespace-nowrap">⚙️ Code execution success</span>
-                            <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full border border-pink-200 font-medium whitespace-nowrap">🔁 User retention (30 days)</span>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">What CodeWise Offers</h3>
+                    <div className="space-y-6">
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">🎯 Structured Language Practice</h4>
+                            <p className="text-sm text-slate-700">A hierarchical learning path — Language → Topic → Subtopic → Coding Questions — powered by an integrated Monaco Editor with live code execution and test case validation.</p>
+                        </div>
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">📄 Smart Study Notes</h4>
+                            <p className="text-sm text-slate-700">Curated PDF study materials accessible directly within the platform via an interactive viewer, so students never leave their workflow.</p>
+                        </div>
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">🏢 Company-Specific Preparation Modules</h4>
+                            <p className="text-sm text-slate-700">Detailed company profiles covering hiring processes, technical rounds, HR questions, aptitude sections, and insider preparation strategies — tailored to real placement interviews.</p>
+                        </div>
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">⏱️ Timed Training Exams</h4>
+                            <p className="text-sm text-slate-700">Realistic mock assessments that simulate actual technical tests, complete with post-exam performance summaries and detailed analytics.</p>
+                        </div>
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">🤖 AI Coding Assistant</h4>
+                            <p className="text-sm text-slate-700">Integrated Google Gemini AI helps students debug code, understand concepts, and receive contextual hints without ever leaving the platform.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Target Users</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Built for Three Roles</h3>
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl">
-                            <h4 className="text-lg font-bold text-blue-700 mb-2">👨‍🎓 Students</h4>
-                            <p className="text-sm text-slate-600 mb-4">People learning programming and preparing for placements.</p>
-                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Clean coding environment</li>
-                                <li>Structured practice path</li>
-                                <li>Instant feedback & tracking</li>
-                            </ul>
+                            <h4 className="text-lg font-bold text-blue-800 mb-3 flex items-center gap-2">👨‍🎓 Students</h4>
+                            <p className="text-sm text-slate-700">A personalized dashboard tracking progress, recent activity, and recommended topics.</p>
                         </div>
                         <div className="p-5 bg-purple-50 border border-purple-100 rounded-xl">
-                            <h4 className="text-lg font-bold text-purple-700 mb-2">🧑‍💼 Content Managers</h4>
-                            <p className="text-sm text-slate-600 mb-4">Users who create and manage questions and learning content.</p>
-                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Easy question creation</li>
-                                <li>Hidden test case support</li>
-                                <li>Topic organization</li>
-                            </ul>
+                            <h4 className="text-lg font-bold text-purple-800 mb-3 flex items-center gap-2">✍️ Content Managers</h4>
+                            <p className="text-sm text-slate-700">A full CMS to create languages, topics, questions, exams, notes, and company modules with rich text support and activity tracking.</p>
                         </div>
                         <div className="p-5 bg-slate-100 border border-slate-200 rounded-xl">
-                            <h4 className="text-lg font-bold text-slate-700 mb-2">🛠️ Admins</h4>
-                            <p className="text-sm text-slate-600 mb-4">Platform operators monitoring system health and exams.</p>
-                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Full system control</li>
-                                <li>User moderation</li>
-                                <li>Audit visibility & Analytics</li>
-                            </ul>
+                            <h4 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">🛡️ Administrators</h4>
+                            <p className="text-sm text-slate-700">A global dashboard with audit logs, content review workflows, user management, and platform-wide analytics.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Core Product Modules</h3>
-                    <div className="space-y-8">
-
-                        {/* 4.1 Coding IDE */}
-                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                            <h4 className="text-xl font-bold text-slate-800 mb-3">4.1 Coding IDE</h4>
-                            <p className="text-sm text-slate-600 mb-4 font-medium">Purpose: Provide a professional coding experience directly in the browser.</p>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <h5 className="font-semibold text-slate-700 mb-2">Key capabilities:</h5>
-                                    <ul className="list-none space-y-1 text-sm text-slate-700">
-                                        <li>🧠 Monaco editor integration</li>
-                                        <li>🎨 Syntax highlighting & dark theme (🌙)</li>
-                                        <li>🌐 Multi language support</li>
-                                        <li>🪟 Split layout with resizable panes</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h5 className="font-semibold text-slate-700 mb-2">Execution & Console:</h5>
-                                    <ul className="list-none space-y-1 text-sm text-slate-700">
-                                        <li>🧪 C and C++ compilation</li>
-                                        <li>🗄️ SQL execution with SQLite</li>
-                                        <li>⏱️ Time/memory limits + custom input</li>
-                                        <li>🔍 Output, Error, and Test results tabs</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                            {/* 4.2 Code Persistence */}
-                            <div className="bg-emerald-50/50 p-5 rounded-xl border border-emerald-100">
-                                <h4 className="text-lg font-bold text-emerald-800 mb-2">4.2 Code Persistence & Autosave</h4>
-                                <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1 mb-3">
-                                    <li>💾 <code className="bg-emerald-100 rounded px-1">code_drafts</code> table</li>
-                                    <li>🔄 Debounced autosave</li>
-                                    <li>🟢 Live save indicators & secure backend sync</li>
-                                </ul>
-                                <p className="text-xs font-semibold text-slate-500 uppercase">User States: Saving / Saved / Error</p>
-                            </div>
-
-                            {/* 4.3 Training Exam */}
-                            <div className="bg-red-50/50 p-5 rounded-xl border border-red-100">
-                                <h4 className="text-lg font-bold text-red-800 mb-2">4.3 Training Exam Module</h4>
-                                <p className="text-sm text-slate-600 mb-2">Simulate real exams with strict integrity controls.</p>
-                                <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                    <li>🔐 Password protected & locked viewport</li>
-                                    <li>👁️ Tab switch, blur, and visibility tracking</li>
-                                    <li>📤 Auto submit on violation</li>
-                                    <li>🔒 Hidden backend test cases</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                            {/* 4.4 Progress Tracking */}
-                            <div className="bg-indigo-50/50 p-5 rounded-xl border border-indigo-100">
-                                <h4 className="text-lg font-bold text-indigo-800 mb-2">4.4 Progress Tracking</h4>
-                                <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1 mb-3">
-                                    <li>📌 Topic level completion & dependencies</li>
-                                    <li>🧭 Visual breadcrumbs & 100% completion gating</li>
-                                </ul>
-                                <p className="text-xs text-slate-500 italic">Curriculum includes Functions, Pointers, Memory management, Exception handling, File handling, STL.</p>
-                            </div>
-
-                            {/* 4.5 AI Assistant */}
-                            <div className="bg-amber-50/50 p-5 rounded-xl border border-amber-100">
-                                <h4 className="text-lg font-bold text-amber-800 mb-2">4.5 AI Assistant</h4>
-                                <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                    <li>🧠 Context aware problem help</li>
-                                    <li>📝 Markdown rendered responses</li>
-                                    <li>🎯 Syntax highlighted responses</li>
-                                    <li>📋 Copy code buttons</li>
-                                </ul>
-                            </div>
-                        </div>
-
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Tech Stack</h3>
+                    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                        <table className="w-full text-sm text-left text-slate-600">
+                            <thead className="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
+                                <tr>
+                                    <th scope="col" className="px-6 py-4 font-bold border-r border-slate-200 w-1/4">Layer</th>
+                                    <th scope="col" className="px-6 py-4 font-bold">Technology</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-200">
+                                <tr className="bg-white hover:bg-slate-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-slate-800 border-r border-slate-200">Frontend</td>
+                                    <td className="px-6 py-4">React 19, React Router v7, Tailwind, Monaco Editor, React PDF</td>
+                                </tr>
+                                <tr className="bg-white hover:bg-slate-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-slate-800 border-r border-slate-200">Backend</td>
+                                    <td className="px-6 py-4">Node.js, Express.js</td>
+                                </tr>
+                                <tr className="bg-white hover:bg-slate-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-slate-800 border-r border-slate-200">Database</td>
+                                    <td className="px-6 py-4">MySQL</td>
+                                </tr>
+                                <tr className="bg-white hover:bg-slate-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-slate-800 border-r border-slate-200">Auth</td>
+                                    <td className="px-6 py-4">JWT, Google OAuth, bcrypt</td>
+                                </tr>
+                                <tr className="bg-white hover:bg-slate-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-slate-800 border-r border-slate-200">AI</td>
+                                    <td className="px-6 py-4">Google Gemini API</td>
+                                </tr>
+                                <tr className="bg-white hover:bg-slate-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-slate-800 border-r border-slate-200">Files</td>
+                                    <td className="px-6 py-4">Multer (PDFs & images)</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">5. User Experience & Content Systems</h3>
-
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
-                        <div className="p-5 border border-slate-200 rounded-xl">
-                            <h4 className="font-bold text-slate-800 mb-3">UI/UX Interface</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>✨ Glassmorphism UI & Light iOS style theme</li>
-                                <li>🔄 Global transition loader & fixed layout gaps</li>
-                                <li>📱 Responsive dashboard</li>
-                                <li>🚀 Dynamic hero, Trusted companies grid</li>
-                            </ul>
-                        </div>
-                        <div className="p-5 border border-slate-200 rounded-xl">
-                            <h4 className="font-bold text-slate-800 mb-3">6. Content Management System</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li><strong className="text-slate-900">RBAC:</strong> Admin, Content Manager, Student.</li>
-                                <li><strong className="text-slate-900">Question Bank:</strong> Add constraints, formatted statements, execution limits, hidden cases.</li>
-                                <li><strong className="text-slate-900">Review Queue:</strong> Manager creates → Admin reviews → Publish/Reject.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Security & Architecture</h3>
+                    <p className="leading-relaxed text-slate-700">The platform is built with production-grade security in mind — bcrypt password hashing, JWT-based stateless authentication, parameterized SQL queries to prevent injection, and role-based middleware enforcing strict access control across all routes.</p>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">7. IT Systems & Non-Functional</h3>
-
-                    <div className="space-y-4 mb-8">
-                        <div className="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <h4 className="font-bold text-slate-800 mb-2">Admin, Auditing & User Management</h4>
-                            <p className="text-sm text-slate-700 mb-2"><strong className="text-slate-900">Capabilities:</strong> View users, suspend, delete, force JWT logout.</p>
-                            <p className="text-sm text-slate-700"><strong className="text-slate-900">Audit Logs:</strong> Automatically records Actor, Action, Entity, Timestamp, and Metadata via backend middleware.</p>
-                        </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Performance</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>Code run under 3s</li>
-                                <li>Autosave under 2s</li>
-                                <li>10k concurrent users</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Security</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>JWT + RBAC</li>
-                                <li>Sandboxed code execution</li>
-                                <li>Hidden test protection</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Reliability</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>Graceful exec failures</li>
-                                <li>Retry mechanisms</li>
-                                <li>Persistent drafts</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Scalability</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>Modular Node services</li>
-                                <li>Queue based execution</li>
-                                <li>Horizontal scalability</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">What I Learned Building This</h3>
+                    <p className="leading-relaxed text-slate-700">Designing CodeWise was more than a coding exercise — it was a lesson in systems thinking. Building a multi-role RBAC system from scratch, integrating an AI assistant into a real-time coding workflow, and architecting a scalable content management pipeline challenged me to think beyond features and consider the full user experience at every layer.</p>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">10. Tech Stack</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                        <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center flex flex-col items-center">
-                            <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Frontend</p>
-                            <p className="font-semibold text-cyan-600 text-sm">⚛️ React<br />🎨 Tailwind CSS<br />🧠 Monaco Editor</p>
-                        </div>
-                        <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center flex flex-col items-center">
-                            <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Backend</p>
-                            <p className="font-semibold text-green-600 text-sm">🟢 Node.js<br />🚂 Express</p>
-                        </div>
-                        <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center flex flex-col items-center">
-                            <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Database</p>
-                            <p className="font-semibold text-blue-600 text-sm">🐬 MySQL<br />🗄️ SQLite (Mem)</p>
-                        </div>
-                        <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center flex flex-col items-center">
-                            <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Infra</p>
-                            <p className="font-semibold text-red-500 text-sm">🧱 Isolated Workers<br />📨 Redis Queues<br />☁️ Cloud Storage</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">11. Roadmap, Risks & Launch Criteria</h3>
-                    <div className="space-y-6">
-                        <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                            <h4 className="font-bold text-slate-800 mb-3">🚀 Future Enhancements</h4>
-                            <div className="flex flex-wrap gap-2 text-sm text-slate-600">
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded shadow-sm">🌐 More language support</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded shadow-sm">🤖 AI code review</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded shadow-sm">🕵️ Plagiarism detection</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded shadow-sm">👥 Live collaborative coding</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded shadow-sm">📱 Mobile app</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded shadow-sm">🏆 Contest & Interview mode</span>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-orange-50 p-5 rounded-xl border border-orange-200">
-                                <h4 className="font-bold text-orange-800 mb-3">⚠️ Risks</h4>
-                                <ul className="list-disc pl-5 text-sm text-orange-900 space-y-1">
-                                    <li>Code execution abuse & Cheating</li>
-                                    <li>High compute load</li>
-                                    <li>Draft data loss</li>
-                                </ul>
-                            </div>
-                            <div className="bg-emerald-50 p-5 rounded-xl border border-emerald-200">
-                                <h4 className="font-bold text-emerald-800 mb-3">🛡️ Mitigations</h4>
-                                <ul className="list-disc pl-5 text-sm text-emerald-900 space-y-1">
-                                    <li>Sandboxed runners & Anti-cheat tracking</li>
-                                    <li>Execution quotas</li>
-                                    <li>Autosave redundancy & Admin workflows</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="p-5 bg-slate-100 rounded-xl border border-slate-200">
-                            <h4 className="font-bold text-slate-800 mb-3">📍 Launch Criteria</h4>
-                            <ul className="list-none text-sm text-slate-700 space-y-2">
-                                <li>✅ Monaco editor stable across browsers</li>
-                                <li>✅ Code execution reliable for supported languages</li>
-                                <li>✅ Training exam security validated</li>
-                                <li>✅ Autosave works without data loss</li>
-                                <li>✅ RBAC fully enforced with Admin review functional</li>
-                                <li>✅ Progress tracking accurate</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">What's Next</h3>
+                    <p className="leading-relaxed text-slate-700 mb-4">The roadmap includes:</p>
+                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>Real-time collaborative coding for peer-to-peer mock interviews</li>
+                        <li>Predictive AI scoring for exam readiness</li>
+                        <li>Gamification with badges and streaks</li>
+                        <li>Migration of file storage to AWS S3 / Google Cloud Storage</li>
+                    </ul>
                 </section>
             </div>
         );
