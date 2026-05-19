@@ -664,6 +664,136 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                 </section>
             </div>
         );
+    } else if (projectTitle === "Expense Monitor") {
+        prdSubtitle = "Expense Monitor — Personal Finance Command Center";
+        prdContent = (
+            <div className="prose prose-slate max-w-none space-y-12">
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Product Vision</h3>
+                    <p className="leading-relaxed text-slate-700"><strong>Expense Monitor</strong> is a personal finance command center designed for daily use on mobile devices. It helps individuals track every rupee they spend, manage their bank savings across multiple accounts, log educational fee receipts, and receive automated daily financial summaries — all inside a beautifully designed, offline-capable Progressive Web App.</p>
+                    <p className="mt-4 text-slate-700"><strong>Core Philosophy:</strong> Every feature must be immediately useful, data must be real (no fake placeholders), and the UI must feel premium and responsive on a phone.</p>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Target User</h3>
+                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
+                        <li>Individual users (primary: students and working professionals in India)</li>
+                        <li>Uses UPI for most payments</li>
+                        <li>Wants to understand spending patterns without using a spreadsheet</li>
+                        <li>Manages savings across 1-3 bank accounts</li>
+                        <li>May pay educational/hostel fees periodically and needs to keep receipts</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Technical Architecture</h3>
+                    <div className="space-y-6">
+                        <div>
+                            <h4 className="text-lg font-bold text-slate-800 mb-2">Frontend Stack</h4>
+                            <div className="flex flex-wrap gap-2 text-sm">
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">React 19</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Vite 8</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Tailwind CSS v4</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">React Router v7</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Recharts</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Tesseract.js (OCR)</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">idb-keyval (PWA Share)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-bold text-slate-800 mb-2">Backend & Database</h4>
+                            <div className="flex flex-wrap gap-2 text-sm">
+                                <span className="px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-lg font-medium">Supabase (PostgreSQL, Auth, Storage)</span>
+                                <span className="px-3 py-1 bg-orange-50 text-orange-700 border border-orange-200 rounded-lg font-medium">Firebase (Push Notifications)</span>
+                                <span className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-lg font-medium">Vercel (Hosting & Serverless Functions)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Core Features & Modules</h3>
+                    
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2">📊 Command Center Dashboard</h4>
+                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li>Real-time financial metrics (Today, Monthly, Annual)</li>
+                                <li>Interactive Month-view Expense Calendar (Heatmap styling)</li>
+                                <li>Doughnut chart for category breakdown</li>
+                                <li>Recent transactions feed</li>
+                            </ul>
+                        </div>
+                        <div className="bg-emerald-50 p-5 rounded-xl border border-emerald-200">
+                            <h4 className="text-lg font-bold text-emerald-800 mb-2">📸 Smart Add Expense + OCR</h4>
+                            <ul className="list-disc pl-5 text-sm text-emerald-900 space-y-1">
+                                <li>Full logging (Name, Amount, Category, Payment Mode, etc.)</li>
+                                <li>Tesseract.js OCR auto-extracts Transaction IDs from receipts</li>
+                                <li>PWA Share Target: directly share UPI screenshots to the app</li>
+                                <li>"Elite Pro" multi-step submission animation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                        <div className="bg-blue-50 p-5 rounded-xl border border-blue-200">
+                            <h4 className="text-lg font-bold text-blue-800 mb-2">🏦 Savings Vault</h4>
+                            <ul className="list-disc pl-5 text-sm text-blue-900 space-y-1">
+                                <li>Manage balances across 1-3 bank accounts</li>
+                                <li>3D Tilt effect premium bank cards</li>
+                                <li>Transfer money between accounts with a Digital Ticket receipt</li>
+                                <li>"Liquid Wealth" visual distribution bar</li>
+                            </ul>
+                        </div>
+                        <div className="bg-purple-50 p-5 rounded-xl border border-purple-200">
+                            <h4 className="text-lg font-bold text-purple-800 mb-2">🎓 Educational Fees Tracker</h4>
+                            <ul className="list-disc pl-5 text-sm text-purple-900 space-y-1">
+                                <li>4-level hierarchy (Year → Semester → Folder → Records)</li>
+                                <li>Attach and OCR receipt images</li>
+                                <li>Export to PDF or Excel</li>
+                                <li>Audit mode for quick review</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">5. Advanced Capabilities</h3>
+                    <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                            <div className="bg-slate-100 p-2 rounded-lg mt-1 shrink-0">📱</div>
+                            <div>
+                                <h4 className="font-bold text-slate-800">Progressive Web App (PWA)</h4>
+                                <p className="text-sm text-slate-700">Installable on iOS/Android, works offline via Workbox service worker caching, and uses the Share Target API to accept images natively.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <div className="bg-slate-100 p-2 rounded-lg mt-1 shrink-0">🔔</div>
+                            <div>
+                                <h4 className="font-bold text-slate-800">Automated Push Notifications</h4>
+                                <p className="text-sm text-slate-700">Vercel Cron jobs trigger daily financial summaries and monthly reports sent directly to devices via Firebase Cloud Messaging.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <div className="bg-slate-100 p-2 rounded-lg mt-1 shrink-0">🛡️</div>
+                            <div>
+                                <h4 className="font-bold text-slate-800">Admin Controls & Security</h4>
+                                <p className="text-sm text-slate-700">Supabase Row Level Security (RLS), biometric-style login animations, and a secure Admin Dashboard for broadcasting email announcements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">6. UI / UX Highlights</h3>
+                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
+                        <li><strong>Dark Mode Support:</strong> Fully integrated light/dark themes with deep Slate 950 backgrounds for true dark mode.</li>
+                        <li><strong>Micro-Interactions:</strong> Receipt pop animations, money flow particles, pulse rings, and scanning laser lines.</li>
+                        <li><strong>Glassmorphism:</strong> Extensive use of backdrop blurs and semi-transparent layers for a premium app feel.</li>
+                    </ul>
+                </section>
+            </div>
+        );
     }
 
     const modalContentContainer = (

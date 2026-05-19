@@ -25,6 +25,17 @@ const ProjectsSection: React.FC = () => {
       hasPRD: true
     },
     {
+      title: "Expense Monitor",
+      description: "A personal finance command center designed for daily use on mobile devices. Helps track spending, manage bank savings, log educational fee receipts, and receive automated summaries.",
+      technologies: ["React 19", "Vite 8", "Tailwind CSS v4", "Supabase", "Firebase", "Vercel"],
+      status: "Live Demo",
+      icon: Zap,
+      gradient: "from-emerald-400 to-teal-500",
+      features: ["Expense Tracking", "OCR Receipt Scanner", "Multiple Bank Accounts", "Educational Fees Manager", "Push Notifications"],
+      link: "https://expensemonitor.tech",
+      hasPRD: true
+    },
+    {
       title: "Disaster Management System",
       description: "A comprehensive web application for disaster preparedness, response coordination, and resource management with real-time alerts and mapping functionality.",
       technologies: ["React", "Node.js", "PostgreSQL", "Socket.io"],
