@@ -14,6 +14,17 @@ const ProjectsSection: React.FC = () => {
 
   const projects = [
     {
+      title: "RISE Placement Prep Platform",
+      description: "A comprehensive, enterprise-grade Placement Preparation Platform designed to bridge the gap between students and corporate expectations with AI mock interviews and proctored tests.",
+      technologies: ["React", "Supabase", "Tailwind CSS", "OpenAI / Gemini", "PostgreSQL"],
+      status: "Live Demo",
+      icon: FileText,
+      gradient: "from-blue-600 to-indigo-600",
+      features: ["AI Mock Interviews", "Proctored Tests", "Learning Hub", "Admin Suite", "Previous Year Questions"],
+      link: "https://rise-jet-two.vercel.app/",
+      hasPRD: true
+    },
+    {
       title: "CodeWise – Smart Learning & Practice Platform",
       description: "An intelligent, AI-powered coding practice and training platform designed to help students master programming, prepare for technical exams, and build real-world problem-solving skills.",
       technologies: ["React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS"],

@@ -40,448 +40,72 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
         prdContent = (
             <div className="prose prose-slate max-w-none space-y-12">
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Product Overview</h3>
-                    <p className="leading-relaxed text-slate-700">DisasterSOS is a web-based emergency response platform that connects people affected by disasters with nearby volunteers who can provide immediate help.</p>
-                    <div className="mt-4">
-                        <p className="font-semibold text-slate-800">The system focuses on:</p>
-                        <ul className="list-disc pl-6 space-y-1 mt-2 text-slate-700">
-                            <li>Fast incident reporting</li>
-                            <li>Local volunteer activation</li>
-                            <li>Real-time coordination</li>
-                            <li>Community-driven disaster response</li>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Executive Summary</h3>
+                    <p className="leading-relaxed text-slate-700">DisasterSOS is a web-based emergency response platform that connects people affected by disasters with nearby volunteers who can provide immediate help. The primary goal is to reduce response time during emergencies by focusing on fast incident reporting, local volunteer activation, real-time coordination, and community-driven disaster response.</p>
+                    <div className="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                        <p className="font-semibold text-slate-800 mb-3">Key Objectives:</p>
+                        <ul className="list-disc pl-6 space-y-1 text-slate-700 text-sm">
+                            <li>Enable victims to report disasters in under 60 seconds.</li>
+                            <li>Notify nearby volunteers instantly.</li>
+                            <li>Provide real-time status tracking.</li>
+                            <li>Build a reliable volunteer response network.</li>
                         </ul>
                     </div>
-                    <p className="mt-4 text-slate-700"><strong className="text-slate-900">Primary goal:</strong> Reduce response time during emergencies.</p>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Product Objectives</h3>
-                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                        <li>Enable victims to report disasters in under 60 seconds.</li>
-                        <li>Notify nearby volunteers instantly.</li>
-                        <li>Provide real-time status tracking.</li>
-                        <li>Build a reliable volunteer response network.</li>
-                        <li>Maintain clear audit and communication records.</li>
-                    </ul>
-                    <div className="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <p className="font-semibold text-slate-800 mb-3">Success metrics:</p>
-                        <div className="flex flex-wrap gap-2 text-sm">
-                            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full border border-green-200 font-medium whitespace-nowrap">Average response time</span>
-                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full border border-blue-200 font-medium whitespace-nowrap">Volunteer acceptance rate</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full border border-purple-200 font-medium whitespace-nowrap">Incident resolution rate</span>
-                            <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full border border-yellow-200 font-medium whitespace-nowrap">Active volunteer count</span>
-                            <span className="px-3 py-1 bg-pink-100 text-pink-700 rounded-full border border-pink-200 font-medium whitespace-nowrap">User satisfaction score</span>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Target Users</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Target Users</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
                         <div className="p-5 bg-red-50 border border-red-100 rounded-xl">
                             <h4 className="text-lg font-bold text-red-700 mb-2">Affected Individuals</h4>
                             <p className="text-sm text-slate-600 mb-4">People facing emergencies who need quick help.</p>
-                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Simple reporting</li>
-                                <li>Fast assistance</li>
-                                <li>Clear status updates</li>
-                            </ul>
+                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs: Simple reporting, fast assistance, clear status.</p>
                         </div>
                         <div className="p-5 bg-green-50 border border-green-100 rounded-xl">
                             <h4 className="text-lg font-bold text-green-700 mb-2">Volunteers</h4>
                             <p className="text-sm text-slate-600 mb-4">Trained or willing helpers ready to respond.</p>
-                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Instant alerts</li>
-                                <li>Location-based assignments</li>
-                                <li>Clear task details</li>
-                                <li>Status update tools</li>
-                            </ul>
+                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs: Instant alerts, location assignments, status tools.</p>
                         </div>
-                        <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl sm:col-span-2 md:col-span-1">
+                        <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl">
                             <h4 className="text-lg font-bold text-blue-700 mb-2">Admin</h4>
-                            <p className="text-sm text-slate-600 mb-4">Platform operators who manage safety and operations.</p>
-                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Incident monitoring</li>
-                                <li>Volunteer management</li>
-                                <li>Content control</li>
-                                <li>Analytics and logs</li>
-                            </ul>
+                            <p className="text-sm text-slate-600 mb-4">Platform operators managing safety.</p>
+                            <p className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">Needs: Incident monitoring, volunteer control, analytics.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Core Features</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Core Features & Modules</h3>
                     <div className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                                <h4 className="text-lg font-bold text-slate-800">🏠 Home Page</h4>
-                                <p className="text-sm text-slate-600 mb-3">Purpose: introduce platform and drive action.</p>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Sections:</p>
-                                <div className="flex flex-wrap gap-2 text-xs mb-4">
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">Hero message</span>
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">CTA buttons</span>
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">How it works</span>
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">Disaster types</span>
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">Volunteer recruitment</span>
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">Testimonials</span>
-                                    <span className="bg-white px-2 py-1 rounded border border-slate-200 text-slate-600">Footer resources</span>
-                                </div>
-                                <p className="text-sm text-slate-700 mt-2">Primary CTAs: <span className="font-mono text-xs bg-slate-200 px-2 py-1 rounded border border-slate-300">Get Started</span> <span className="font-mono text-xs bg-slate-200 px-2 py-1 rounded border border-slate-300">Become a Volunteer</span> <span className="font-mono text-xs bg-slate-200 px-2 py-1 rounded border border-slate-300">Create an Account</span> <span className="font-mono text-xs bg-slate-200 px-2 py-1 rounded border border-slate-300">Sign In</span></p>
-                            </div>
-                            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                                <h4 className="text-lg font-bold text-slate-800">🔐 Authentication</h4>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 mt-2">User Registration Fields:</p>
-                                <ul className="list-disc pl-5 text-sm text-slate-700">
-                                    <li>Name</li>
-                                    <li>Email</li>
-                                    <li>Password</li>
-                                    <li>Role selection (Victim/User or Volunteer)</li>
-                                </ul>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 mt-3">Validation & Login:</p>
-                                <ul className="list-disc pl-5 text-sm text-slate-700">
-                                    <li>Email uniqueness, Password strength, Required fields</li>
-                                    <li>Email and password</li>
-                                    <li>Secure session handling & Role based redirect</li>
-                                </ul>
-                            </div>
+                        <div className="bg-orange-50/50 p-5 rounded-xl border border-orange-200">
+                            <h4 className="font-bold text-orange-700 mb-2">Disaster Reporting & Incident Management</h4>
+                            <p className="text-sm text-slate-700 mb-2">Fast reporting via form (Type, Severity, Location via GPS, Details). Tracks incident lifecycle (Reported → Assigned → En Route → In Progress → Resolved) with real-time updates for victims and volunteers.</p>
+                        </div>
+                        <div className="bg-green-50/50 p-5 rounded-xl border border-green-200">
+                            <h4 className="font-bold text-green-700 mb-2">Volunteer Module</h4>
+                            <p className="text-sm text-slate-700 mb-2">Volunteer registration with skills and service radius, requiring admin approval. Alerts are dispatched to eligible volunteers based on location matching, allowing them to accept/decline and mark en-route.</p>
+                        </div>
+                        <div className="bg-blue-50/50 p-5 rounded-xl border border-blue-200">
+                            <h4 className="font-bold text-blue-800 mb-2">Map & Location System</h4>
+                            <p className="text-sm text-slate-700 mb-2">Interactive map displaying active disasters, volunteer locations, and severity color coding with live refresh.</p>
+                        </div>
+                        <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-slate-800 mb-2">Admin Panel</h4>
+                            <p className="text-sm text-slate-700">Comprehensive controls for User Management, Incident Monitoring, Analytics Dashboard, and full Audit Logs for all actions.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">5. Disaster Reporting Module</h3>
-                    <div className="p-6 bg-orange-50/50 border border-orange-200 rounded-xl">
-                        <p className="text-lg font-medium text-slate-800 mb-4">🎯 Goal: Allow users to report incidents quickly.</p>
-                        <h4 className="font-bold text-orange-700 mb-4">Report Form Fields</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700">
-                            <div>
-                                <span className="font-semibold text-slate-900">Type:</span> Flood, Fire, Earthquake, Hurricane, Other
-                            </div>
-                            <div>
-                                <span className="font-semibold text-slate-900">Severity:</span> Low, Medium, High, Critical
-                            </div>
-                            <div>
-                                <span className="font-semibold text-slate-900">Location:</span> Auto detect GPS, Manual entry
-                            </div>
-                            <div>
-                                <span className="font-semibold text-slate-900">Details:</span> Description, Optional photo upload, Contact phone
-                            </div>
-                        </div>
-                        <div className="mt-6 pt-5 border-t border-orange-200">
-                            <h5 className="font-bold text-slate-800 mb-3">Submission Flow</h5>
-                            <div className="flex flex-wrap items-center text-sm text-slate-700 gap-2 font-medium">
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded-full shadow-sm">User submits report</span>
-                                <span>→</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded-full shadow-sm">System validates data</span>
-                                <span>→</span>
-                                <span className="text-yellow-700 font-semibold border border-yellow-300 bg-yellow-100 px-3 py-1 rounded-full shadow-sm whitespace-nowrap">Incident: Pending</span>
-                                <span>→</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded-full shadow-sm whitespace-nowrap">Nearby volunteers notified</span>
-                                <span>→</span>
-                                <span className="px-3 py-1 bg-white border border-slate-300 rounded-full shadow-sm whitespace-nowrap">Incident visible on admin dashboard</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">6. Volunteer Module</h3>
-                    <div className="space-y-6">
-                        <div className="p-5 bg-green-50/50 border border-green-200 rounded-xl content-wrapper">
-                            <h4 className="text-lg font-bold text-green-700 mb-3">🧑‍🚒 Volunteer Registration</h4>
-                            <div className="grid sm:grid-cols-2 gap-4 text-sm">
-                                <div>
-                                    <p className="font-semibold text-slate-800">Additional Fields:</p>
-                                    <ul className="list-disc pl-5 mt-1 text-slate-600">
-                                        <li>Skills</li>
-                                        <li>Availability</li>
-                                        <li>Service radius</li>
-                                        <li>Phone number</li>
-                                        <li>ID verification upload</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p className="font-semibold text-slate-800">Status:</p>
-                                    <ul className="list-disc pl-5 mt-1 text-slate-600">
-                                        <li>Pending approval</li>
-                                        <li>Approved</li>
-                                        <li>Suspended</li>
-                                    </ul>
-                                    <p className="mt-2 italic text-slate-500">* Admin approval required before activation.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                <h4 className="text-lg font-bold text-slate-800 mb-3">🔔 Volunteer Alerts</h4>
-                                <p className="text-sm text-slate-600 mb-2 font-medium">When a disaster is reported:</p>
-                                <ol className="list-decimal pl-5 text-sm text-slate-600 space-y-1">
-                                    <li>Location matching runs</li>
-                                    <li>Eligible volunteers notified</li>
-                                    <li>First-accept or multi-accept based on config</li>
-                                </ol>
-                                <p className="text-sm text-slate-700 mt-3"><span className="font-semibold">Channels:</span> In-app, Email, Push (future)</p>
-                            </div>
-                            <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                                <h4 className="text-lg font-bold text-slate-800 mb-3">✅ Accept Incident</h4>
-                                <p className="text-sm text-slate-600 mb-2 font-medium">Volunteer can:</p>
-                                <ul className="list-disc pl-5 text-sm text-slate-600 space-y-1">
-                                    <li>View incident details</li>
-                                    <li>Accept or Decline request</li>
-                                    <li>Mark as en route</li>
-                                    <li>Mark as completed</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">7. Incident Management</h3>
-                    <div className="space-y-6">
-                        <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                            <h4 className="text-lg font-bold text-slate-800 mb-3">Status Lifecycle</h4>
-                            <div className="flex flex-wrap items-center text-sm font-medium gap-2 text-slate-600">
-                                <span className="bg-white border border-slate-300 px-3 py-1 rounded shadow-sm">Reported</span> <span>→</span>
-                                <span className="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 rounded shadow-sm">Assigned</span> <span>→</span>
-                                <span className="bg-orange-50 text-orange-700 border border-orange-200 px-3 py-1 rounded shadow-sm">En Route</span> <span>→</span>
-                                <span className="bg-purple-50 text-purple-700 border border-purple-200 px-3 py-1 rounded shadow-sm">In Progress</span> <span>→</span>
-                                <span className="bg-green-50 text-green-700 border border-green-200 px-3 py-1 rounded shadow-sm">Resolved</span> <span>→</span>
-                                <span className="bg-slate-200 text-slate-700 border border-slate-300 px-3 py-1 rounded shadow-sm">Closed</span>
-                            </div>
-                            <p className="text-sm text-slate-500 mt-3 italic">* Admin can override any status.</p>
-                        </div>
-                        <div>
-                            <h4 className="text-lg font-bold text-slate-800 mb-3">Real Time Updates</h4>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div className="p-4 bg-white border border-slate-200 rounded min-h-[120px]">
-                                    <p className="font-semibold text-slate-700 mb-2 border-b border-slate-100 pb-1">Victim sees:</p>
-                                    <ul className="list-disc pl-5 text-sm text-slate-600 space-y-1">
-                                        <li>Volunteer assigned</li>
-                                        <li>ETA (Estimated Time of Arrival)</li>
-                                        <li>Status changes</li>
-                                    </ul>
-                                </div>
-                                <div className="p-4 bg-white border border-slate-200 rounded min-h-[120px]">
-                                    <p className="font-semibold text-slate-700 mb-2 border-b border-slate-100 pb-1">Volunteer sees:</p>
-                                    <ul className="list-disc pl-5 text-sm text-slate-600 space-y-1">
-                                        <li>Navigation info</li>
-                                        <li>Task updates</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">8. Map and Location System</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-blue-50/50 p-5 rounded-xl border border-blue-100">
-                            <h4 className="font-bold text-blue-800 mb-2">Interactive map displays:</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Active disasters</li>
-                                <li>Volunteer locations</li>
-                                <li>Incident severity indicators</li>
-                            </ul>
-                        </div>
-                        <div className="bg-blue-50/50 p-5 rounded-xl border border-blue-100">
-                            <h4 className="font-bold text-blue-800 mb-2">Map features & Future:</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                                <li>Marker clustering</li>
-                                <li>Severity color coding</li>
-                                <li>Live refresh</li>
-                                <li>Location search</li>
-                            </ul>
-                            <p className="text-sm text-slate-600 font-semibold mt-3">Future capabilities:</p>
-                            <ul className="list-disc pl-5 text-sm text-slate-600">
-                                <li>Heatmaps</li>
-                                <li>Route optimization</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">9. Disaster Types Supported</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg text-center flex flex-col items-center">
-                            <span className="text-3xl mb-2">🌊</span>
-                            <h4 className="font-bold text-blue-800 mb-2 line-clamp-1">Flood</h4>
-                            <ul className="text-xs text-left text-slate-600 space-y-1 px-2">
-                                <li className="list-disc">Evacuation support</li>
-                                <li className="list-disc">Temp shelter help</li>
-                                <li className="list-disc">Clean water supply</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 bg-orange-50 border border-orange-200 rounded-lg text-center flex flex-col items-center">
-                            <span className="text-3xl mb-2">🔥</span>
-                            <h4 className="font-bold text-orange-800 mb-2 line-clamp-1">Fire</h4>
-                            <ul className="text-xs text-left text-slate-600 space-y-1 px-2">
-                                <li className="list-disc">Wildfire response</li>
-                                <li className="list-disc">Building fire evac</li>
-                                <li className="list-disc">Emergency coord</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 bg-stone-50 border border-stone-200 rounded-lg text-center flex flex-col items-center">
-                            <span className="text-3xl mb-2">🌍</span>
-                            <h4 className="font-bold text-stone-800 mb-2 line-clamp-1">Earthquake</h4>
-                            <ul className="text-xs text-left text-slate-600 space-y-1 px-2">
-                                <li className="list-disc">Search and rescue</li>
-                                <li className="list-disc">Medical help</li>
-                                <li className="list-disc">Temporary shelter</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 bg-cyan-50 border border-cyan-200 rounded-lg text-center flex flex-col items-center">
-                            <span className="text-3xl mb-2">🌀</span>
-                            <h4 className="font-bold text-cyan-800 mb-2 line-clamp-1">Hurricane</h4>
-                            <ul className="text-xs text-left text-slate-600 space-y-1 px-2">
-                                <li className="list-disc">Pre storm prep</li>
-                                <li className="list-disc">Evacuation help</li>
-                                <li className="list-disc">Post storm clean</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p className="mt-4 text-sm text-slate-500 italic bg-white inline-block px-3 py-1 rounded border border-slate-200 shadow-sm">* System must allow adding new disaster types from admin panel.</p>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">10. Community Impact Section</h3>
-                    <p className="text-slate-700 font-semibold mb-3">Purpose: build trust.</p>
-                    <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                        <p className="text-sm text-slate-600 mb-2">Content to display on site:</p>
-                        <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
-                            <li>User testimonials</li>
-                            <li>Volunteer stories</li>
-                            <li>Community leader feedback</li>
-                        </ul>
-                        <p className="mt-3 text-xs text-slate-500 font-medium">All content is strictly admin manageable.</p>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">11. Admin Panel</h3>
-                    <h4 className="text-lg font-bold text-slate-800 mb-4 inline-flex items-center gap-2">🛠️ Admin Capabilities</h4>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        <div className="border border-slate-200 rounded-lg p-4 bg-white">
-                            <h5 className="font-bold text-slate-700 mb-2">User Management</h5>
-                            <ul className="list-disc pl-5 text-sm text-slate-600"><li>View users</li><li>Approve volunteers</li><li>Suspend accounts</li><li>Reset passwords</li></ul>
-                        </div>
-                        <div className="border border-slate-200 rounded-lg p-4 bg-white">
-                            <h5 className="font-bold text-slate-700 mb-2">Incident Management</h5>
-                            <ul className="list-disc pl-5 text-sm text-slate-600"><li>View all reports</li><li>Override assignments</li><li>Update statuses</li><li>Priority tagging</li></ul>
-                        </div>
-                        <div className="border border-slate-200 rounded-lg p-4 bg-white">
-                            <h5 className="font-bold text-slate-700 mb-2">Volunteer Monitoring</h5>
-                            <ul className="list-disc pl-5 text-sm text-slate-600"><li>Active volunteers</li><li>Response times</li><li>Acceptance rates</li><li>Availability tracking</li></ul>
-                        </div>
-                        <div className="border border-slate-200 rounded-lg p-4 bg-white">
-                            <h5 className="font-bold text-slate-700 mb-2">Content Management</h5>
-                            <ul className="list-disc pl-5 text-sm text-slate-600"><li>Disaster types</li><li>Static pages</li><li>FAQ</li><li>Resources</li></ul>
-                        </div>
-                    </div>
-                    <div className="mt-6 p-5 bg-indigo-50/50 rounded-xl border border-indigo-100">
-                        <h5 className="font-bold text-indigo-900 mb-4">Analytics Dashboard & Audit Logs</h5>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <h6 className="font-semibold text-indigo-800 text-sm mb-2">Metrics:</h6>
-                                <ul className="list-disc pl-5 text-sm text-slate-700">
-                                    <li>Active incidents</li>
-                                    <li>Avg response time</li>
-                                    <li>Volunteer coverage</li>
-                                    <li>Resolution rate</li>
-                                    <li>Geographic heatmap</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h6 className="font-semibold text-indigo-800 text-sm mb-2">Audit Logs Track (Actor, Action, Entity, Timestamp, Metadata):</h6>
-                                <ul className="list-disc pl-5 text-sm text-slate-700">
-                                    <li>Admin actions</li>
-                                    <li>Status changes</li>
-                                    <li>Volunteer assignments</li>
-                                    <li>Critical edits</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">12. Notifications System</h3>
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                            <h4 className="font-bold text-slate-800 mb-3">Phase 1</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700">
-                                <li>In-app notifications</li>
-                                <li>Email alerts</li>
-                            </ul>
-                        </div>
-                        <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                            <h4 className="font-bold text-slate-800 mb-3">Phase 2</h4>
-                            <ul className="list-disc pl-5 text-sm text-slate-700">
-                                <li>Push notifications</li>
-                                <li>SMS for critical alerts</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">13. Non Functional Requirements</h3>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Performance</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>Submit under 2 seconds</li>
-                                <li>Notify under 5 seconds</li>
-                                <li>Support 10k users</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Security</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>JWT based auth</li>
-                                <li>RBAC control</li>
-                                <li>Encrypted passwords</li>
-                                <li>Secure file uploads</li>
-                                <li>Rate limiting</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Reliability</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>99.9% uptime target</li>
-                                <li>Graceful failure</li>
-                                <li>Retry for notify</li>
-                                <li>Backup strategy</li>
-                            </ul>
-                        </div>
-                        <div className="p-4 border border-slate-200 rounded-lg">
-                            <h4 className="font-bold text-slate-800 mb-2">Scalability</h4>
-                            <ul className="space-y-1 text-sm text-slate-600 list-disc pl-5">
-                                <li>Modular services</li>
-                                <li>Horizontal scaling</li>
-                                <li>CDN for statics</li>
-                                <li>Queue based notify</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">14. Tech Stack</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Technical Architecture</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                         <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center">
                             <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Frontend</p>
-                            <p className="font-semibold text-cyan-600">React<br />Tailwind CSS</p>
+                            <p className="font-semibold text-cyan-600">React, Tailwind CSS</p>
                         </div>
                         <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center">
                             <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Backend</p>
-                            <p className="font-semibold text-green-600">Node.js<br />Express</p>
+                            <p className="font-semibold text-green-600">Node.js, Express</p>
                         </div>
                         <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center">
                             <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Database</p>
@@ -489,59 +113,51 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                         </div>
                         <div className="p-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center">
                             <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-2">Infra</p>
-                            <p className="font-semibold text-red-500 text-sm">Redis (queue)<br />Cloud Storage<br />Map API</p>
+                            <p className="font-semibold text-red-500 text-sm">Redis, Maps API</p>
                         </div>
+                    </div>
+                    <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+                        <h4 className="font-bold text-slate-800 mb-2">Non-Functional Requirements</h4>
+                        <ul className="space-y-1 text-sm text-slate-700 list-disc pl-5">
+                            <li><strong>Performance:</strong> Submit reports &lt; 2s, notifications &lt; 5s, supports 10k users.</li>
+                            <li><strong>Security:</strong> JWT auth, RBAC, Encrypted passwords, Rate limiting.</li>
+                            <li><strong>Reliability:</strong> 99.9% uptime, graceful failures, backup strategy.</li>
+                        </ul>
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">15. Future Enhancements</h3>
-                    <div className="flex flex-wrap gap-3">
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">Mobile apps</span>
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">AI severity prediction</span>
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">Auto volunteer routing</span>
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">Multi language support</span>
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">Government integration</span>
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">Offline reporting mode</span>
-                        <span className="px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-sm text-slate-700 font-medium">SOS one tap button</span>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">5. Additional Project Context</h3>
+                    
+                    <h4 className="font-bold text-slate-800 mt-6 mb-3">Disaster Types Supported</h4>
+                    <div className="flex flex-wrap gap-2 text-sm text-slate-700 mb-6">
+                        <span className="px-3 py-1 bg-blue-50 border border-blue-200 rounded-lg">🌊 Flood</span>
+                        <span className="px-3 py-1 bg-orange-50 border border-orange-200 rounded-lg">🔥 Fire</span>
+                        <span className="px-3 py-1 bg-stone-50 border border-stone-200 rounded-lg">🌍 Earthquake</span>
+                        <span className="px-3 py-1 bg-cyan-50 border border-cyan-200 rounded-lg">🌀 Hurricane</span>
                     </div>
-                </section>
 
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">16. Risks and Considerations</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-red-50 p-5 rounded-lg border border-red-200">
-                            <h4 className="font-bold text-red-800 mb-3">Potential Risks</h4>
-                            <ul className="list-disc pl-5 text-sm text-red-900 space-y-1">
-                                <li>False reports</li>
-                                <li>Volunteer reliability</li>
-                                <li>Location accuracy</li>
-                                <li>High traffic during major disasters</li>
-                                <li>Data privacy compliance</li>
-                            </ul>
-                        </div>
-                        <div className="bg-green-50 p-5 rounded-lg border border-green-200">
-                            <h4 className="font-bold text-green-800 mb-3">Mitigation Strategies</h4>
-                            <ul className="list-disc pl-5 text-sm text-green-900 space-y-1">
-                                <li>Report verification flow</li>
-                                <li>Volunteer rating system</li>
-                                <li>Rate limiting</li>
-                                <li>Admin moderation tools</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">17. Launch Criteria</h3>
-                    <p className="text-slate-700 font-semibold mb-3">Product is ready when:</p>
-                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                        <li><strong className="text-slate-800">Core reporting works:</strong> Form submission, location parsing, severity assignment.</li>
-                        <li><strong className="text-slate-800">Volunteer assignment works:</strong> Notifications dispatch and accept/decline features operate flawlessly.</li>
-                        <li><strong className="text-slate-800">Real-time updates stable:</strong> Both victim and volunteer receive instant state changes.</li>
-                        <li><strong className="text-slate-800">Admin controls functional:</strong> Ability to moderate incidents, manage volunteers, and track system health.</li>
-                        <li><strong className="text-slate-800">Security checks passed:</strong> Penetration testing, data validation, protected endpoints.</li>
+                    <h4 className="font-bold text-slate-800 mb-3">Risks & Mitigations</h4>
+                    <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1 mb-6">
+                        <li><strong>False Reports:</strong> Mitigated via report verification flow and rate limiting.</li>
+                        <li><strong>Volunteer Reliability:</strong> Addressed via a volunteer rating system.</li>
+                        <li><strong>High Traffic:</strong> Modular services and horizontal scaling.</li>
                     </ul>
+
+                    <h4 className="font-bold text-slate-800 mb-3">Launch Criteria</h4>
+                    <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1 mb-6">
+                        <li>Core reporting and location parsing functional.</li>
+                        <li>Real-time updates stable for victims/volunteers.</li>
+                        <li>Admin controls fully operational with security checks passed.</li>
+                    </ul>
+
+                    <h4 className="font-bold text-slate-800 mb-3">Future Enhancements</h4>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                        <span className="px-2 py-1 bg-slate-100 rounded-md">Mobile apps</span>
+                        <span className="px-2 py-1 bg-slate-100 rounded-md">AI severity prediction</span>
+                        <span className="px-2 py-1 bg-slate-100 rounded-md">Auto volunteer routing</span>
+                        <span className="px-2 py-1 bg-slate-100 rounded-md">Offline reporting mode</span>
+                    </div>
                 </section>
             </div>
         );
@@ -549,17 +165,35 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
         prdSubtitle = "CodeWise — A Full-Stack Technical Interview Preparation Platform";
         prdContent = (
             <div className="prose prose-slate max-w-none space-y-12">
-                <div>
-                    <p className="leading-relaxed text-slate-700 text-lg">After months of design, development, and iteration, I'm proud to present CodeWise — a comprehensive learning management platform built to bridge the gap between academic learning and real-world industry expectations for aspiring software engineers.</p>
-                </div>
-
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">The Problem I Set Out to Solve</h3>
-                    <p className="leading-relaxed text-slate-700">Students preparing for technical placements often juggle scattered resources — random coding sites, unstructured notes, generic mock tests, and little visibility into what specific companies actually look for. CodeWise brings all of this into one structured, intelligent platform.</p>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Executive Summary</h3>
+                    <p className="leading-relaxed text-slate-700">CodeWise is a comprehensive learning management platform built to bridge the gap between academic learning and real-world industry expectations for aspiring software engineers.</p>
+                    <div className="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                        <p className="font-semibold text-slate-800 mb-2">The Problem</p>
+                        <p className="text-sm text-slate-700">Students preparing for technical placements often juggle scattered resources — random coding sites, unstructured notes, generic mock tests, and little visibility into what specific companies actually look for. CodeWise brings all of this into one structured, intelligent platform.</p>
+                    </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">What CodeWise Offers</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Target Users</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl">
+                            <h4 className="text-lg font-bold text-blue-800 mb-3 flex items-center gap-2">👨‍🎓 Students</h4>
+                            <p className="text-sm text-slate-700">A personalized dashboard tracking progress, recent activity, and recommended topics.</p>
+                        </div>
+                        <div className="p-5 bg-purple-50 border border-purple-100 rounded-xl">
+                            <h4 className="text-lg font-bold text-purple-800 mb-3 flex items-center gap-2">✍️ Content Managers</h4>
+                            <p className="text-sm text-slate-700">A full CMS to create languages, topics, questions, exams, notes, and company modules with rich text support and activity tracking.</p>
+                        </div>
+                        <div className="p-5 bg-slate-100 border border-slate-200 rounded-xl">
+                            <h4 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">🛡️ Administrators</h4>
+                            <p className="text-sm text-slate-700">A global dashboard with audit logs, content review workflows, user management, and platform-wide analytics.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Core Features & Modules</h3>
                     <div className="space-y-6">
                         <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
                             <h4 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-2">🎯 Structured Language Practice</h4>
@@ -585,26 +219,8 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Built for Three Roles</h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl">
-                            <h4 className="text-lg font-bold text-blue-800 mb-3 flex items-center gap-2">👨‍🎓 Students</h4>
-                            <p className="text-sm text-slate-700">A personalized dashboard tracking progress, recent activity, and recommended topics.</p>
-                        </div>
-                        <div className="p-5 bg-purple-50 border border-purple-100 rounded-xl">
-                            <h4 className="text-lg font-bold text-purple-800 mb-3 flex items-center gap-2">✍️ Content Managers</h4>
-                            <p className="text-sm text-slate-700">A full CMS to create languages, topics, questions, exams, notes, and company modules with rich text support and activity tracking.</p>
-                        </div>
-                        <div className="p-5 bg-slate-100 border border-slate-200 rounded-xl">
-                            <h4 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">🛡️ Administrators</h4>
-                            <p className="text-sm text-slate-700">A global dashboard with audit logs, content review workflows, user management, and platform-wide analytics.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Tech Stack</h3>
-                    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Technical Architecture</h3>
+                    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm mb-6">
                         <table className="w-full text-sm text-left text-slate-600">
                             <thead className="text-xs text-slate-700 uppercase bg-slate-100 border-b border-slate-200">
                                 <tr>
@@ -640,22 +256,20 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                             </tbody>
                         </table>
                     </div>
+                    <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+                        <h4 className="font-bold text-slate-800 mb-2">Security & Architecture</h4>
+                        <p className="text-sm text-slate-700">The platform is built with production-grade security in mind — bcrypt password hashing, JWT-based stateless authentication, parameterized SQL queries to prevent injection, and role-based middleware enforcing strict access control across all routes.</p>
+                    </div>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">Security & Architecture</h3>
-                    <p className="leading-relaxed text-slate-700">The platform is built with production-grade security in mind — bcrypt password hashing, JWT-based stateless authentication, parameterized SQL queries to prevent injection, and role-based middleware enforcing strict access control across all routes.</p>
-                </section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">5. Additional Project Context</h3>
+                    
+                    <h4 className="font-bold text-slate-800 mt-6 mb-3">What I Learned Building This</h4>
+                    <p className="leading-relaxed text-sm text-slate-700 mb-6">Designing CodeWise was more than a coding exercise — it was a lesson in systems thinking. Building a multi-role RBAC system from scratch, integrating an AI assistant into a real-time coding workflow, and architecting a scalable content management pipeline challenged me to think beyond features and consider the full user experience at every layer.</p>
 
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">What I Learned Building This</h3>
-                    <p className="leading-relaxed text-slate-700">Designing CodeWise was more than a coding exercise — it was a lesson in systems thinking. Building a multi-role RBAC system from scratch, integrating an AI assistant into a real-time coding workflow, and architecting a scalable content management pipeline challenged me to think beyond features and consider the full user experience at every layer.</p>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">What's Next</h3>
-                    <p className="leading-relaxed text-slate-700 mb-4">The roadmap includes:</p>
-                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
+                    <h4 className="font-bold text-slate-800 mb-3">What's Next</h4>
+                    <ul className="list-disc pl-6 space-y-2 text-sm text-slate-700 mb-6">
                         <li>Real-time collaborative coding for peer-to-peer mock interviews</li>
                         <li>Predictive AI scoring for exam readiness</li>
                         <li>Gamification with badges and streaks</li>
@@ -669,13 +283,13 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
         prdContent = (
             <div className="prose prose-slate max-w-none space-y-12">
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Product Vision</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Executive Summary</h3>
                     <p className="leading-relaxed text-slate-700"><strong>Expense Monitor</strong> is a personal finance command center designed for daily use on mobile devices. It helps individuals track every rupee they spend, manage their bank savings across multiple accounts, log educational fee receipts, and receive automated daily financial summaries — all inside a beautifully designed, offline-capable Progressive Web App.</p>
                     <p className="mt-4 text-slate-700"><strong>Core Philosophy:</strong> Every feature must be immediately useful, data must be real (no fake placeholders), and the UI must feel premium and responsive on a phone.</p>
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Target User</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Target Users</h3>
                     <ul className="list-disc pl-6 space-y-2 text-slate-700">
                         <li>Individual users (primary: students and working professionals in India)</li>
                         <li>Uses UPI for most payments</li>
@@ -686,33 +300,7 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                 </section>
 
                 <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Technical Architecture</h3>
-                    <div className="space-y-6">
-                        <div>
-                            <h4 className="text-lg font-bold text-slate-800 mb-2">Frontend Stack</h4>
-                            <div className="flex flex-wrap gap-2 text-sm">
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">React 19</span>
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Vite 8</span>
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Tailwind CSS v4</span>
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">React Router v7</span>
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Recharts</span>
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Tesseract.js (OCR)</span>
-                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">idb-keyval (PWA Share)</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 className="text-lg font-bold text-slate-800 mb-2">Backend & Database</h4>
-                            <div className="flex flex-wrap gap-2 text-sm">
-                                <span className="px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-lg font-medium">Supabase (PostgreSQL, Auth, Storage)</span>
-                                <span className="px-3 py-1 bg-orange-50 text-orange-700 border border-orange-200 rounded-lg font-medium">Firebase (Push Notifications)</span>
-                                <span className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-lg font-medium">Vercel (Hosting & Serverless Functions)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Core Features & Modules</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Core Features & Modules</h3>
                     
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                         <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
@@ -755,11 +343,9 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                             </ul>
                         </div>
                     </div>
-                </section>
-
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">5. Advanced Capabilities</h3>
-                    <div className="space-y-4">
+                    
+                    <h4 className="font-bold text-slate-800 mt-6 mb-3">Advanced Capabilities</h4>
+                    <div className="space-y-4 mb-6">
                         <div className="flex items-start gap-3">
                             <div className="bg-slate-100 p-2 rounded-lg mt-1 shrink-0">📱</div>
                             <div>
@@ -782,15 +368,161 @@ const PRDModal: React.FC<PRDPageProps> = ({ isOpen, projectTitle, onClose }) => 
                             </div>
                         </div>
                     </div>
-                </section>
-                
-                <section>
-                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">6. UI / UX Highlights</h3>
-                    <ul className="list-disc pl-6 space-y-2 text-slate-700">
+                    
+                    <h4 className="font-bold text-slate-800 mt-6 mb-3">UI / UX Highlights</h4>
+                    <ul className="list-disc pl-6 space-y-2 text-slate-700 mb-6">
                         <li><strong>Dark Mode Support:</strong> Fully integrated light/dark themes with deep Slate 950 backgrounds for true dark mode.</li>
                         <li><strong>Micro-Interactions:</strong> Receipt pop animations, money flow particles, pulse rings, and scanning laser lines.</li>
                         <li><strong>Glassmorphism:</strong> Extensive use of backdrop blurs and semi-transparent layers for a premium app feel.</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Technical Architecture</h3>
+                    <div className="space-y-6">
+                        <div>
+                            <h4 className="text-lg font-bold text-slate-800 mb-2">Frontend Stack</h4>
+                            <div className="flex flex-wrap gap-2 text-sm">
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">React 19</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Vite 8</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Tailwind CSS v4</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">React Router v7</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Recharts</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">Tesseract.js (OCR)</span>
+                                <span className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-lg font-medium text-slate-700">idb-keyval (PWA Share)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 className="text-lg font-bold text-slate-800 mb-2">Backend & Database</h4>
+                            <div className="flex flex-wrap gap-2 text-sm">
+                                <span className="px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-lg font-medium">Supabase (PostgreSQL, Auth, Storage)</span>
+                                <span className="px-3 py-1 bg-orange-50 text-orange-700 border border-orange-200 rounded-lg font-medium">Firebase (Push Notifications)</span>
+                                <span className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-lg font-medium">Vercel (Hosting & Serverless Functions)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        );
+    } else if (projectTitle === "RISE Placement Prep Platform") {
+        prdSubtitle = "RISE — Enterprise-grade Placement Preparation Platform";
+        prdContent = (
+            <div className="prose prose-slate max-w-none space-y-12">
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">1. Executive Summary</h3>
+                    <p className="leading-relaxed text-slate-700"><strong>RISE</strong> is a comprehensive, enterprise-grade Placement Preparation Platform designed to bridge the gap between students and corporate expectations. The platform provides end-to-end preparation tools, including strictly proctored mock tests, an AI-driven voice mock interview system, previous year question banks, and a structured learning hub. It is split into two primary interfaces: the <strong>Student Portal</strong> for learning and assessment, and the <strong>Enterprise Admin Suite</strong> for content management, user administration, and analytics.</p>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">2. Target Users</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="p-5 bg-blue-50 border border-blue-100 rounded-xl">
+                            <h4 className="text-lg font-bold text-blue-800 mb-2">👨‍🎓 Students</h4>
+                            <p className="text-sm text-slate-700">Primary users who access the Student Portal for learning, practicing mock tests, and AI voice mock interviews.</p>
+                        </div>
+                        <div className="p-5 bg-purple-50 border border-purple-100 rounded-xl">
+                            <h4 className="text-lg font-bold text-purple-800 mb-2">🛡️ Admins</h4>
+                            <p className="text-sm text-slate-700">Manage mock tests, question banks, AI rubrics, and monitor student performance via the Enterprise Admin Suite.</p>
+                        </div>
+                        <div className="p-5 bg-slate-100 border border-slate-200 rounded-xl">
+                            <h4 className="text-lg font-bold text-slate-800 mb-2">👑 Super Admins</h4>
+                            <p className="text-sm text-slate-700">Platform owners with global oversight, access to system settings, and the ability to bypass maintenance mode.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">3. Core Features & Modules</h3>
+                    
+                    <h4 className="font-bold text-slate-800 mb-4">Student Portal Features</h4>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-slate-800 mb-2">Student Dashboard & Learning</h4>
+                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li>Overview metrics, recent activity resume links, and in-app notifications.</li>
+                                <li><strong>PYQ:</strong> Company-wise filtering and built-in PDF/Document viewer.</li>
+                                <li><strong>Learning Hub:</strong> Structured learning paths, progress tracking, and embedded video player.</li>
+                            </ul>
+                        </div>
+                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-slate-800 mb-2">Proctored Mock Test Engine</h4>
+                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li>Tab switching detection, full-screen enforcement, webcam snapshotting, and AI face detection.</li>
+                                <li>Timer countdown, section-wise navigation, and built-in basic calculator overlay.</li>
+                                <li>Detailed post-test scorecard and analytics.</li>
+                            </ul>
+                        </div>
+                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 sm:col-span-2">
+                            <h4 className="font-bold text-slate-800 mb-2">AI Mock Interviews (Voice-Enabled)</h4>
+                            <ul className="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li>Global Practice Modules or specific Companies → Interview Rounds.</li>
+                                <li>Conversational AI utilizing Speech-to-Text (STT) and Text-to-Speech (TTS).</li>
+                                <li>Real-time feedback and grading against predefined rubrics.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4 className="font-bold text-slate-800 mb-4">Admin Portal Features</h4>
+                    <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-8">
+                        <ul className="list-disc pl-5 text-sm text-slate-700 space-y-2">
+                            <li><strong>System Overview & Users:</strong> Live metrics dashboard, student and admin management with isolated session handling.</li>
+                            <li><strong>Communications Center:</strong> In-app notification broadcaster and Resend API email broadcasts.</li>
+                            <li><strong>Content Management:</strong> Upload PYQ PDFs with metadata tagging, and a Course Builder for the Learning Hub.</li>
+                            <li><strong>Assessment Config:</strong> Configure mock tests, build sections/questions, set marking rules, and review proctoring logs.</li>
+                            <li><strong>AI Mock Interviews Admin:</strong> Manage Companies, Rounds, Global Modules, and Question Banks with ideal answers/rubrics.</li>
+                            <li><strong>System Controls:</strong> Feedback inbox and Maintenance mode toggle with dynamic messaging.</li>
+                        </ul>
+                    </div>
+                    
+                    <h4 className="font-bold text-slate-800 mb-4">Global System Settings</h4>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-slate-800 mb-2">UI / UX & Theming</h4>
+                            <ul className="list-disc pl-5 text-sm text-slate-700">
+                                <li><strong>Dynamic Theming:</strong> Global Light/Dark mode toggle applied across all components.</li>
+                                <li><strong>Responsive Design:</strong> Mobile-first Tailwind CSS implementation.</li>
+                                <li><strong>Cinematic Landing Page:</strong> Features a hero section, animated journey timeline, mock interview interactive preview, floating statistics, and testimonials.</li>
+                            </ul>
+                        </div>
+                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-slate-800 mb-2">Maintenance Mode</h4>
+                            <ul className="list-disc pl-5 text-sm text-slate-700">
+                                <li><strong>Maintenance Lockout:</strong> Global route guard that intercepts traffic when Maintenance Mode is active.</li>
+                                <li><strong>Bypass for Super Admins:</strong> super_admin roles bypass the maintenance lock.</li>
+                                <li><strong>Dynamic Under Construction Page:</strong> Highly animated maintenance page utilizing WebGL shaders (aurora/particles).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 className="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4">4. Technical Architecture</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div className="p-3 bg-white border border-slate-200 rounded-lg text-center">
+                            <p className="text-xs font-bold text-slate-500 uppercase">Frontend</p>
+                            <p className="text-sm font-semibold text-slate-800">React (Vite)<br/>Tailwind CSS</p>
+                        </div>
+                        <div className="p-3 bg-white border border-slate-200 rounded-lg text-center">
+                            <p className="text-xs font-bold text-slate-500 uppercase">Backend</p>
+                            <p className="text-sm font-semibold text-slate-800">Supabase<br/>(PostgreSQL)</p>
+                        </div>
+                        <div className="p-3 bg-white border border-slate-200 rounded-lg text-center">
+                            <p className="text-xs font-bold text-slate-500 uppercase">AI & Integrations</p>
+                            <p className="text-sm font-semibold text-slate-800">OpenAI / Gemini<br/>Resend (Emails)</p>
+                        </div>
+                        <div className="p-3 bg-white border border-slate-200 rounded-lg text-center">
+                            <p className="text-xs font-bold text-slate-500 uppercase">State & Routing</p>
+                            <p className="text-sm font-semibold text-slate-800">React Context<br/>React Router DOM</p>
+                        </div>
+                    </div>
+                    <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+                        <h4 className="font-bold text-slate-800 mb-2">Authentication & Authorization</h4>
+                        <ul className="list-disc pl-5 text-sm text-slate-700">
+                            <li><strong>Role-Based Access Control (RBAC):</strong> Three distinct roles: student, admin, and super_admin.</li>
+                            <li><strong>Session Management:</strong> Secure Supabase authentication with JWT tokens and automatic session persistence.</li>
+                            <li><strong>Role-based Redirection:</strong> Users are automatically routed to /dashboard or /admin upon login.</li>
+                        </ul>
+                    </div>
                 </section>
             </div>
         );
