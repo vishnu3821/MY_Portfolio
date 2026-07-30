@@ -5,6 +5,7 @@ import Linkedin from 'lucide-react/dist/esm/icons/linkedin';
 import Mail from 'lucide-react/dist/esm/icons/mail';
 import Code from 'lucide-react/dist/esm/icons/code';
 import ChevronUp from 'lucide-react/dist/esm/icons/chevron-up';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 
 const FooterSection: React.FC = () => {
   const socialLinks = [
@@ -167,6 +168,29 @@ const FooterSection: React.FC = () => {
               </div>
             </motion.a>
           ))}
+        </motion.div>
+
+        {/* Upgraded Portfolio Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-12"
+        >
+          <a 
+            href="https://vishnu1720.netlify.app/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 border border-blue-500/30 text-white hover:bg-gradient-to-r hover:from-blue-500/30 hover:via-purple-500/30 hover:to-pink-500/30 transition-all duration-300 backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.15)] hover:shadow-[0_0_25px_rgba(147,51,234,0.3)] group cursor-pointer"
+          >
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span className="text-sm md:text-base font-medium text-slate-100">Check out my upgraded portfolio version! ✨</span>
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          </a>
         </motion.div>
 
         {/* Scroll to top button */}

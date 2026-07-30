@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Menu from 'lucide-react/dist/esm/icons/menu';
 import X from 'lucide-react/dist/esm/icons/x';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -69,6 +70,21 @@ const Navbar = () => {
           : 'bg-transparent'
         }`}
     >
+      <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 border-b border-white/5 py-2 px-4 text-center backdrop-blur-md">
+        <a 
+          href="https://vishnu1720.netlify.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-200 hover:text-white transition-colors group"
+        >
+          <span className="flex h-2 w-2 relative">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          <span>I've upgraded my portfolio! Check out the new version ✨</span>
+          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <motion.a
